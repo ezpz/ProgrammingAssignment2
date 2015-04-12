@@ -11,7 +11,7 @@
 # [getCache] Returns the cached result of a 'solve' operation (or NULL)
 # [setCache] Set the value of the cache
 # [getMatrix] Returns the underlying matrix object
-makeCacheMatrix <- function (m = matrix()) {
+makeCacheMatrix <- function (m = matrix ()) {
     cache <- NULL
     
     # Update the contents of the matrix and invalidate the cache
@@ -51,7 +51,7 @@ cacheSolve <- function (m, ...) {
         return (slv)
     }
     obj <- m$getMatrix ()
-    result <- solve(obj,...)
+    result <- solve (obj, ...)
     m$setCache (result)
     result
 }
